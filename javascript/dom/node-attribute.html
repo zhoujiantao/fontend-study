@@ -1,0 +1,41 @@
+
+<html>
+<head></head>
+
+
+<body>
+
+
+<ul id="nav">
+
+
+	<!--<li>   <a href="">Home</a></li>-->
+	<li>   <a id="first-link" href="#">Home</a></li>
+	<li><a href="">News</a>   </li>
+	
+	<li><a href="">About</a></li>
+</ul>
+
+<script type="text/javascript">
+
+ 
+
+ 
+var link = document.getElementById('first-link');
+var attrs = link.attributes;
+
+//console.log(attrs);
+ 
+
+console.log(attrs.item(0));
+console.log(attrs.getNamedItem('href'));
+console.log(attrs.setNamedItem('href'));
+
+
+</script>
+
+<body>
+
+
+
+</html>

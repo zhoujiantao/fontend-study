@@ -1,0 +1,75 @@
+
+<html>
+<head></head>
+
+
+<body>
+
+<script type="text/javascript">
+	//<![CDATA[
+	console.log('cdatatest');
+	//]]>
+
+</script>
+
+<ul id="nav">
+
+
+	<!--<li>   <a href="">Home</a></li>-->
+	<li>   <a href="">Home</a></li>
+	<li><a href="">News</a>   </li>
+	
+	<li><a href="">About</a></li>
+</ul>
+
+<script type="text/javascript">
+
+var nodeType={
+/**继承自Element元素的nodeType **/
+1:'ELEMENT_NODE',
+/** attribute节点的nodeType ***/
+2:'ATTRIBUTE_NODE',
+/**空字符、换行、文本节点的nodeType      **/
+3:'TEXT_NODE',
+/**  CDATA节点的nodeType    **/
+4:'CDATA_SECTION_NODE',
+/**实体引用元素**/
+5:'ENTITY_REFERENCE_NODE',
+/**实体***/
+6:'ENTITY_NODE',
+/** 处理指令 **/
+7:'PROCESSING_INSTRUCTION_NODE',
+/** 注释   **/
+8:'COMMENT_NODE',
+/**document.nodeType**/
+9:'DOCUMENT_NODE',
+/**doctype 节点**/
+10:'DOCUMENT_TYPE_NODE',
+/**轻量Document 对象**/
+11:'DOCUMENT_FRAGMENT_NODE',
+/**DTD中声明的符号**/
+12:'NOTATION_NODE'
+};
+
+
+var nav = document;
+var children = nav.childNodes;
+/******
+ 空格解析为text节点
+ 回车解析为text节点
+
+***/
+ for(var i=0,j=children.length;i<j;i++)
+ {
+	 console.log('nodeName:'+children[i].nodeName+' nodeType:'+nodeType[children[i].nodeType]);
+ }
+ console.log(Node.ELEMENT_NODE);
+
+
+</script>
+
+<body>
+
+
+
+</html>
